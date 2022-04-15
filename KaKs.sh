@@ -1,6 +1,7 @@
 ###准备文件，蛋白序列文件，cds序列文件
 ####第一步---序列比对####
 ##1、蛋白序列比对##
+#更改sample.pep.fasta为蛋白序列文件名，sample.cds.fasta为cds文件名#
 muscle -in sample.pep.fasta -out sample_BD.pep.fasta ###如果没有muscle可以conda install muscle，也可以有其他序列比对软件
 ##2、蛋白序列与cds序列比对##
 pal2nal.pl  sample_BD.pep.fasta  sample.cds.fasta -output fasta > cds_pep_aln.fa ###安装pal2nal.v14###
