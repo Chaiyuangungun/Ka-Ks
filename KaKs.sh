@@ -28,6 +28,6 @@ echo $i
 KaKs_Calculator  -i $i -o ${i%%.*}.kaks.  ###KaKs_Calculator计算Ka/Ks
 done
 ##6、合并Ka/Ks结果
-ls *.kaks > inupt_2
+ls *.kaks > input_2
 python3 KaKs_2.py -input input_2 -output result
 ###结果result---共3列，第一列为计算的2个基因id，第二列为Ka/Ks，第三列为Pvalue
