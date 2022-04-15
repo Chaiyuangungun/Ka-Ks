@@ -3,7 +3,13 @@
 ##1、蛋白序列比对##
 muscle -in sample.pep.fasta -out sample_BD.pep.fasta ###如果没有muscle可以conda install muscle，也可以有其他序列比对软件
 ##2、蛋白序列与cds序列比对##
-pal2nal.pl  sample_BD.pep.fasta  sample.cds.fasta -output fasta > cds_pep_aln.fa 
+pal2nal.pl  sample_BD.pep.fasta  sample.cds.fasta -output fasta > cds_pep_aln.fa ###安装pal2nal.v14###
+###wget http://www.bork.embl.de/pal2nal/distribution/pal2nal.v14.tar.gz
+###tar -zxvf pal2nal.v14.tar.gz
+###cd pal2nal.v14/
+###可以看到pal2nal.pl，将其加入环境变量
+### echo "export PATH=$PATH:/share/home/stu_chaikun/biosoft/pal2nal.v14/" >> ~/.bash_profile
+### source ~/.bash_profile
 ##3、拆分并合并基因对##
 csplit cds_pep_aln.fa /\>/ -n2 -s {*} -f gene -b "%1d.fa" ; rm gene0.fa ###csplit linux的文件拆分命令，具体参数自己搜索
 ls *.fa >input_1
