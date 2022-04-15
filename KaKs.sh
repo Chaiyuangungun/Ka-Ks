@@ -18,7 +18,7 @@ ls *.fa >input_1
 python3 KaKs_1.py -input input_1
 bash run.sh
 ##4、转化fa文件为axt格式文件##
-for i in *.fa
+for i in *_*.fa
 do
 echo $i
 perl parseFastaIntoAXT.pl $i
