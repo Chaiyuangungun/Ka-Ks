@@ -25,7 +25,7 @@ done
 for i in *.fa.axt
 do
 echo $i
-KaKs_Calculator  -i $i -o ${i%%.*}.kaks.  ###KaKs_Calculator计算Ka/Ks
+KaKs_Calculator  -i $i -o ${i%%.*}.kaks  ###KaKs_Calculator计算Ka/Ks
 done
 ##6、合并Ka/Ks结果
 ls *.kaks > input_2
