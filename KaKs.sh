@@ -15,6 +15,7 @@ csplit cds_pep_aln.fa /\>/ -n2 -s {*} -f gene -b "%1d.fa" ; rm gene0.fa ###cspli
 ls *.fa >input_1
 python3 KaKs_1.py -input input_1
 bash run.sh
+rm cds_pep_aln*
 ##4、转化fa文件为axt格式文件##
 for i in *.fa
 do
