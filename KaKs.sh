@@ -12,10 +12,10 @@ pal2nal.pl  sample_BD.pep.fasta  sample.cds.fasta -output fasta > cds_pep_aln.fa
 ### source ~/.bash_profile
 ##3、拆分并合并基因对##
 csplit cds_pep_aln.fa /\>/ -n2 -s {*} -f gene -b "%1d.fa" ; rm gene0.fa ###csplit linux的文件拆分命令，具体参数自己搜索
+rm cds_pep_aln*
 ls *.fa >input_1
 python3 KaKs_1.py -input input_1
 bash run.sh
-rm cds_pep_aln*
 ##4、转化fa文件为axt格式文件##
 for i in *.fa
 do
